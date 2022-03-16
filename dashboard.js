@@ -10,7 +10,7 @@ addAppForm.addEventListener('submit',(e)=>{
      addDoc(colRef,{
         Name : addAppForm.nameVal.value,
         Description : addAppForm.descVal.value,
-        createdAt: serverTimestamp
+        createdAt: serverTimestamp()
      }).then(()=>{
         
         alert ("App info added successfully");

@@ -20,17 +20,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 const colRef = collection(db,'Apps');
-const q = query(colRef,orderBy('Name','desc'));
-
-onSnapshot(q,(snapshot)=>{
-  
-    let apps = [];
-    snapshot.docs.forEach((doc)=>{
-      apps.push({...doc.data(),id: doc.id});
-      
-    });
-    console.log(apps);
-});
 
 
-export { colRef, addDoc,db,doc,deleteDoc,serverTimestamp};
+
+export { colRef, addDoc,db,doc,deleteDoc,serverTimestamp,orderBy,onSnapshot,query};
