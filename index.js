@@ -1,9 +1,6 @@
-import { initializeApp } from "firebase/app";
-import {
-    getFirestore,
-    collection, getDocs
 
-} from "firebase/firestore";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import { getFirestore, doc, getDoc, getDocs, collection } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 const firebaseConfig = {
   apiKey: "AIzaSyCAN7HJ2VtfM--ryPZrNsFh3brJlaGNxmM",
   authDomain: "database-1-82b19.firebaseapp.com",
@@ -20,15 +17,15 @@ const db = getFirestore();
 
 const colRef = collection(db,'Apps');
 
-// getDocs(colRef).then((snapshot)=>{
-//     let apps = [];
-//     snapshot.docs.forEach((doc)=>{
-//       apps.push({...doc.data(),id: doc.id});
-//       console.log(apps)
-//     });
-// }).catch(err=>{
-//   console.log(err.message);
-// });
+getDocs(colRef).then((snapshot)=>{
+    let apps = [];
+    snapshot.docs.forEach((doc)=>{
+      apps.push({...doc.data(),id: doc.id});
+      console.log(apps)
+    });
+}).catch(err=>{
+  console.log(err.message);
+});
 
 const addAppForm = document.getElementById('form1');
 
