@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
   
-    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Document</title>
 </head>
 <body>
-    <form class="container" id="form1">
+  <div class="mainContainer">
+    <form  id="form1">
     <div class="field">
         <label class="label">Name</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Enter App Name">
+          <input class="input" type="text" placeholder="Enter App Name" name="nameVal">
         </div>
       </div>
       
@@ -25,7 +26,7 @@
       <div class="field">
         <label class="label">Description</label>
         <div class="control">
-          <textarea class="textarea" placeholder="Enter App Description" ></textarea>
+          <textarea class="textarea" placeholder="Enter App Description" name="descVal"></textarea>
         </div>
       </div>
       
@@ -40,6 +41,19 @@
       </div>
     </form>
 
+    <form id="form2" class="my-3">
+      <div class="field">
+        <label class="label">Enter Id: </label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Enter App Name" name="deleteVal">
+        </div>
+      </div>
+      <div class="control">
+        <button type="submit" class="button is-link">delete</button>
+      </div>
+    </form>
+  </div>
+  <script type="module" src="dashboard.js"></script>
     <script  type="module" src="index.js"></script>
 </body>
 </html>
