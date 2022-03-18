@@ -10,7 +10,8 @@ addAppForm.addEventListener('submit',(e)=>{
      addDoc(colRef,{
         Name : addAppForm.nameVal.value,
         Description : addAppForm.descVal.value,
-        createdAt: serverTimestamp()
+        createdAt: serverTimestamp(),
+        imageUrl : addAppForm.appLogoUrl.value
      }).then(()=>{
         
         alert ("App info added successfully");
@@ -24,7 +25,7 @@ delAppForm.addEventListener('submit',(e)=>{
      e.preventDefault();
 
      const docRef = doc(db,'Apps',delAppForm.deleteVal.value);
-     console.log("delapp form runnidn");
+     console.log("delapp form running");
      deleteDoc(docRef).then(()=>{
         delAppForm.reset();
       alert("App info deleted successfully");
