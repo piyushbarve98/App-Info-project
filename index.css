@@ -55,7 +55,7 @@ li {
     padding-top: 30px;
   }
 
-   button {
+   button,a {
     background-color:#485fc7;
     border: none;
     color: white;
@@ -71,4 +71,17 @@ li {
   .app-title{
     font-family: 'Bebas Neue';
     font-size: 25px;
+  }
+ 
+  .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .nextButtonDiv{
+    margin-top: 15px;
+    margin-bottom: 5px;
   }

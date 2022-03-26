@@ -44,19 +44,27 @@ onSnapshot(q,(snapshot)=>{
 
         const modal = document.querySelector(".modal");
         const modalBox = document.querySelector(".box");
-
+        const nextButtonDiv = document.querySelector(".nextButtonDiv");
+        const modalDesc = document.querySelector(".modalDesc");
         
         
         button.onclick = function(){
             modal.classList.add("is-active");
-            const nextButton = document.createElement("button");
+            const nextButton = document.createElement("a");
             nextButton.textContent = "Next";
-            modalBox.innerHTML = "";
-            modalBox.append(nextButton);
+            
+            nextButton.href = doc.data().installUrl;
+            modalDesc.textContent = doc.data().Description;
+            nextButtonDiv.append(nextButton);
+            
+            modalBox.append(modalDesc);
+            modalBox.append(nextButtonDiv);
         }
         const closeModalButton = document.querySelector('.modal-close');
         closeModalButton.onclick = function(){
             modal.classList.remove("is-active");
+            modalDesc.innerHTML="";
+            nextButtonDiv.innerHTML = "";
         }
     });
     

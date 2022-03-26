@@ -1,8 +1,8 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-import { getFirestore, doc, getDoc, onSnapshot,
+import { getFirestore, doc, getDocs, onSnapshot,
    collection,addDoc,deleteDoc,query,orderBy,
-   serverTimestamp
+   serverTimestamp,where
 
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 const firebaseConfig = {
@@ -23,4 +23,4 @@ const colRef = collection(db,'Apps');
 
 
 
-export { colRef, addDoc,db,doc,deleteDoc,serverTimestamp,orderBy,onSnapshot,query};
+export { colRef, addDoc,db,doc,deleteDoc,serverTimestamp,orderBy,onSnapshot,query,where,getDocs};

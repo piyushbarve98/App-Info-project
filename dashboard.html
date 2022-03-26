@@ -11,12 +11,23 @@
     <title>Document</title>
 </head>
 <body class="has-background-link">
+  <!-- modal div -->
+   <div class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+
+      <div class="box">
+        <p>great work</p>
+      </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div> 
+  <!-- modal div end-->
   <div class="mainContainer">
     <form  id="form1">
     <div class="field">
         <label class="label">Name</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Enter App Name" name="nameVal">
+          <input class="input" type="text" placeholder="Enter App Name" name="nameVal" required>
         </div>
       </div>
       
@@ -27,7 +38,7 @@
       <div class="field">
         <label class="label">Description</label>
         <div class="control">
-          <textarea class="textarea" placeholder="Enter App Description" name="descVal"></textarea>
+          <textarea class="textarea" placeholder="Enter App Description" name="descVal" required></textarea>
         </div>
       </div>
       
@@ -39,21 +50,28 @@
         </div>
       </div>
 
+      <!-- App install url-->
+
+      <div class="field">
+        <label class="label">App Install Url</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Enter App Logo Url" name="appInstallUrl">
+        </div>
+      </div>
+
       <div class="field is-grouped">
         <div class="control">
           <button type="submit" class="button is-link">Save</button>
         </div>
-        <div class="control">
-          <button class="button is-link is-light">Cancel</button>
-        </div>
+        
       </div>
     </form>
 
     <form id="form2" class="my-3">
       <div class="field">
-        <label class="label">Enter Id: </label>
+        <label class="label">Enter App Name </label>
         <div class="control">
-          <input class="input" type="text" placeholder="Enter App Name" name="deleteVal">
+          <input class="input" type="text" placeholder="Enter App Name" name="deleteVal" required>
         </div>
       </div>
       <div class="control">
