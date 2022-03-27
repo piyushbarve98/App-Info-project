@@ -8,7 +8,7 @@ addAppForm.addEventListener('submit',(e)=>{
      e.preventDefault();
 
      addDoc(colRef,{
-        Name : addAppForm.nameVal.value.toLowerCase(),
+        Name : addAppForm.nameVal.value.trim().toLowerCase(),
         Description : addAppForm.descVal.value,
         createdAt: serverTimestamp(),
         imageUrl : addAppForm.appLogoUrl.value,
@@ -23,8 +23,10 @@ addAppForm.addEventListener('submit',(e)=>{
 const delAppForm = document.getElementById('form2');
 
 delAppForm.addEventListener('submit',async (e)=>{
+   
      e.preventDefault();
-     const q = query(colRef, where("Name", "==", delAppForm.deleteVal.value.toLowerCase()));
+     console.log('delapp form run here');
+     const q = query(colRef, where("Name", "==", delAppForm.deleteVal.value.trim().toLowerCase()));
    const docToDel = await getDocs(q);
       
    docToDel.forEach((docP)=>{
