@@ -1,4 +1,6 @@
 
+// Main Javascript which handles data
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
 import { getFirestore, doc, getDocs, onSnapshot,
    collection,addDoc,deleteDoc,query,orderBy,

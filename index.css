@@ -85,3 +85,20 @@ li {
     margin-top: 15px;
     margin-bottom: 5px;
   }
+
+  /* css for first logo and description in index.html */
+
+  .firstDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top : 10px;
+  }
+
+  .firstDesc{
+    margin-top: 13px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+  }

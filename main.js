@@ -1,3 +1,6 @@
+
+// Javascript file for index.html 
+
 import { colRef, addDoc,db,doc,deleteDoc,serverTimestamp,orderBy,onSnapshot,query} from './index.js';
 
 const q = query(colRef,orderBy('createdAt'));
