@@ -102,3 +102,8 @@ li {
     color: white;
     text-align: center;
   }
+  /* main logo dimensions */
+  .firstLogo{
+    height: 110px;
+    width: 110px;
+  }
